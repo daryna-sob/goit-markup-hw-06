@@ -471,7 +471,25 @@
         </div>
         <div class="modal-field">
           <label for="user-text" class="modal-label">Комментарий</label>
-          <textarea name="user-text" id="user-text"></textarea>
+          <textarea
+            name="user-text"
+            id="user-text"
+            class="modal-text"
+            placeholder="Введите текст"
+          ></textarea>
+        </div>
+        <div class="modal-field">
+          <input
+            type="checkbox"
+            name="privacy"
+            value="true"
+            class="modal-check visually-hidden"
+            id="privacy"
+          />
+          <label for="privacy" class="check-text"></label>
+            Соглашаюсь с рассылкой и принимаю
+            <span class="modal-span">Условия договора</span>
+          </label>
         </div>
       </div>
     </div>

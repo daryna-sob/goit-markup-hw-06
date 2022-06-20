@@ -705,9 +705,45 @@ img {
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
 }
+.modal-input:focus {
+  border: 1px solid #2196f3;
+  outline: none;
+}
+.modal-input:focus + .modal-icons {
+  fill: #2196f3;
+}
 .modal-icons {
   position: absolute;
   left: 15px;
   top: 50%;
   transform: translateY(-50%);
+}
+.modal-check:checked + .check-text::before {
+  background-color: #2196f3;
+  background-image: url(../images/modal-right.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+}
+.modal-check:focus + .check-text::before {
+  color: var(--accent-button-color);
+}
+.check-text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  color: #757575;
+  display: flex;
+}
+.modal-span {
+  text-decoration-line: underline;
+  color: #2196f3;
+}
+.check-text::before {
+  content: "";
+  width: 16px;
+  height: 15px;
+  border: 2px solid #212121;
+  border-radius: 3px;
+  margin-right: 8px;
 }
