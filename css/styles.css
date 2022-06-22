@@ -185,7 +185,9 @@ img {
   width: 696px;
 }
 
-.hero-button {
+.hero-button,
+.modal-button,
+.footer-button {
   min-width: 200px;
   height: 50px;
   font-family: inherit;
@@ -204,7 +206,11 @@ img {
   transition: background-color 250ms, cubic-bezier(0.4, 0, 0.2, 1);
 }
 .hero-button:hover,
-.hero-button:focus {
+.hero-button:focus,
+.modal-button:hover,
+.modal-button:focus,
+.footer-button:hover,
+.footer-button:focus {
   background-color: #188ce8;
 }
 
@@ -543,7 +549,50 @@ img {
 .join-soc-link:focus .join-soc-icon {
   fill: #ffffff;
 }
-
+/* ----------------------------------------------------SUBSCRIBE---------------------------------------------------- */
+.subscribe-third-footer {
+  margin-left: 93px;
+}
+.subscribe-form {
+}
+.subscribe-title {
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+  color: var(--quaternary-text-color);
+  margin-bottom: 20px;
+}
+.subscribe-wpap {
+  position: relative;
+}
+.subscribe-label {
+  position: absolute;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 16px;
+}
+.footer-input {
+  min-width: 358px;
+  height: 50px;
+  background-color: transparent;
+  color: var(--quaternary-text-color);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  margin-right: 12px;
+  position: relative;
+  padding-left: 70px;
+}
+.subscribe-label {
+  position: absolute;
+}
+.footer-button {
+  border: none;
+}
+.subscribe-icon {
+  fill: var(--quaternary-text-color);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
 /*-------------------------------------------------------PORTFOLIO.HTML---------------------------------------------*/
 .portfolio {
   padding-top: 94px;
@@ -693,8 +742,25 @@ img {
 .modal-field {
   margin-bottom: 10px;
 }
+
 .modal-label {
+  display: block;
+  margin-bottom: 4px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  color: var(--primary-text-color);
 }
+.modal-text {
+  padding: 12px 16px;
+  resize: none;
+  width: 100%;
+  min-height: 120px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+}
+
 .input-wrap {
   position: relative;
 }
@@ -704,8 +770,10 @@ img {
   height: 40px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+  padding-left: 40px;
 }
-.modal-input:focus {
+.modal-input:focus,
+.modal-text:focus {
   border: 1px solid #2196f3;
   outline: none;
 }
@@ -718,6 +786,7 @@ img {
   top: 50%;
   transform: translateY(-50%);
 }
+
 .modal-check:checked + .check-text::before {
   background-color: #2196f3;
   background-image: url(../images/modal-right.svg);
@@ -728,12 +797,16 @@ img {
 .modal-check:focus + .check-text::before {
   color: var(--accent-button-color);
 }
-.check-text {
+
+.check-text,
+.modal-span {
   font-weight: 400;
   font-size: 14px;
   line-height: 1.71;
   color: #757575;
   display: flex;
+  align-items: center;
+  position: relative;
 }
 .modal-span {
   text-decoration-line: underline;
@@ -746,4 +819,9 @@ img {
   border: 2px solid #212121;
   border-radius: 3px;
   margin-right: 8px;
+}
+.modal-button {
+  margin: 0 auto;
+  margin-top: 30px;
+  display: block;
 }
